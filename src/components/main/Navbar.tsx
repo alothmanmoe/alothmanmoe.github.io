@@ -11,7 +11,6 @@ import {
     MobileNavbarMenuProps,
     MobileNavbarToggleProps
 } from "@/components/models/NavbarModels";
-import {Button} from "@/components/Button";
 import {FaBars, FaEnvelope, FaTimes} from "react-icons/fa";
 import Link from "next/link";
 
@@ -107,15 +106,15 @@ const FullNavbarItems = ({routes, minimized, onItemClick}: FullNavbarItemsProps)
 
 const FullNavbarContact = () => (
     <div className="flex items-center gap-2">
-        <Button
-            title="Contact me"
-            className="rounded-full z-50"
+        <button
+            title="Contact Me"
+            className="z-50 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-medium h-9 px-4 py-2 transition-colors hover:bg-primary/90"
             onClick={() => {
                 document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})
             }}
         >
             <FaEnvelope/>
-        </Button>
+        </button>
     </div>
 )
 
@@ -244,16 +243,16 @@ export function Navbar() {
                         }
 
                         <div className="flex w-full flex-col gap-4">
-                            <Button
-                                title="Contact me"
+                            <button
+                                title="Contact Me"
+                                className="z-50 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-medium h-9 px-4 py-2 transition-colors hover:bg-primary/90"
                                 onClick={() => {
                                     setIsMobileMenuOpen(false)
                                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
                                 }}
-                                className="w-full rounded-full"
                             >
                                 <FaEnvelope />
-                            </Button>
+                            </button>
                         </div>
                     </MobileNavbarMenu>
                 </MobileNavbarBody>
