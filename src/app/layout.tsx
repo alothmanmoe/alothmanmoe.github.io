@@ -1,4 +1,5 @@
 import type {Metadata} from "next";
+import {ReactNode} from "react";
 import {Geist, Geist_Mono} from "next/font/google";
 import {Navbar} from "@/components/main/Navbar";
 import {siteConfig} from "@/config/SiteConfig";
@@ -66,12 +67,16 @@ export const metadata: Metadata = {
     }
 };
 
-export default function RootLayout({children}: { children: React.ReactNode; }) {
+export default function RootLayout({children}: { children: ReactNode; }) {
     return (
         <html
             lang="en"
             className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
         >
+        <head>
+            <link rel="canonical" href={siteConfig.baseUrl} />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </head>
         <body className="min-h-full flex flex-col">
         <Navbar/>
         <main role="main">
