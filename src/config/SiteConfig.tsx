@@ -1,4 +1,4 @@
-import {FaBriefcase, FaCode, FaProjectDiagram, FaUser} from "react-icons/fa";
+import {FaBriefcase, FaCode, FaEnvelope, FaGithub, FaLinkedin, FaProjectDiagram, FaUser} from "react-icons/fa";
 
 export const siteConfig = {
     baseUrl: 'https://moealothman.com',
@@ -48,6 +48,32 @@ export const siteConfig = {
             {name: 'Skills', link: '#skills', icon: <FaCode/>},
             {name: 'Projects', link: '#projects', icon: <FaProjectDiagram/>},
             {name: 'Experience', link: '#experience', icon: <FaBriefcase/>}
+        ]
+    },
+    footer: {
+        description: "Backend engineer building reliable APIs, distributed systems, and scalable production software with a focus on performance and clean design.",
+        socialLinks: [
+            {
+                href: 'https://github.com/alothmanmoe/',
+                icon: <FaGithub className="w-5 h-5"/>,
+                label: 'GitHub',
+            },
+            {
+                href: 'https://www.linkedin.com/in/alothmanmoe/',
+                icon: <FaLinkedin className="w-5 h-5"/>,
+                label: 'LinkedIn',
+            },
+            {
+                href: 'alothmanmoe@gmail.com',
+                icon: <FaEnvelope className="w-5 h-5"/>,
+                label: 'Email',
+            }
+        ],
+        quickLinks: [
+            {name: 'About', href: '#about'},
+            {name: 'Skills', href: '#skills'},
+            {name: 'Projects', href: '#projects'},
+            {name: 'Experience', href: '#experience'},
         ]
     }
 };

@@ -1,8 +1,9 @@
 import type {Metadata} from "next";
 import {ReactNode} from "react";
 import {Geist, Geist_Mono} from "next/font/google";
-import {Navbar} from "@/components/main/Navbar";
 import {siteConfig} from "@/config/SiteConfig";
+import {Navbar} from "@/components/main/Navbar";
+import {Footer} from "@/components/main/Footer";
 import "@/styles/globals.css"
 import "@radix-ui/themes/styles.css";
 
@@ -82,6 +83,7 @@ export default function RootLayout({children}: { children: ReactNode; }) {
         <main role="main">
             {children}
         </main>
+        <Footer />
         </body>
         </html>
     );
