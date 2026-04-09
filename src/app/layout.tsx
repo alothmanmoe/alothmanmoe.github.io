@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import {ReactNode} from "react";
 import {Geist, Geist_Mono} from "next/font/google";
 import {siteConfig} from "@/config/SiteConfig";
+import {CursorFollower} from "@/components/main/CursorFollower";
 import {Navbar} from "@/components/main/Navbar";
 import {Footer} from "@/components/main/Footer";
 import "@/styles/globals.css"
@@ -75,15 +76,16 @@ export default function RootLayout({children}: { children: ReactNode; }) {
             className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
         >
         <head>
-            <link rel="canonical" href={siteConfig.baseUrl} />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="canonical" href={siteConfig.baseUrl}/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
         </head>
         <body className="min-h-full flex flex-col">
         <Navbar/>
         <main role="main">
             {children}
         </main>
-        <Footer />
+        <Footer/>
+        <CursorFollower/>
         </body>
         </html>
     );
