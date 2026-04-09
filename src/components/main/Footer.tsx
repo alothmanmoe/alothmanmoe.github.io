@@ -34,7 +34,6 @@ export function Footer() {
                     initial="hidden"
                     animate="visible"
                 >
-
                     <motion.div className="space-y-4" variants={childVariants}>
                         <h1 title={siteConfig.profile.fullName}
                             className="text-2xl font-extrabold bg-clip-text">{siteConfig.profile.fullName}</h1>
@@ -49,14 +48,14 @@ export function Footer() {
                             Quick Links
                         </h2>
                         <ul className="space-y-2 text-sm">
-                            {siteConfig.footer.quickLinks.map((item) => (
-                                <li key={`footer-link-${item.name}`}>
+                            {siteConfig.footer.quickLinks.map((link) => (
+                                <li key={`footer-ref-${link.name}`}>
                                     <a
-                                        href={item.href}
+                                        href={link.url}
                                         className="hover:text-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
-                                        aria-label={`Navigate to ${item.name} section`}
+                                        aria-label={`Navigate to ${link.name} section`}
                                     >
-                                        {item.name}
+                                        {link.name}
                                     </a>
                                 </li>
                             ))}
@@ -64,26 +63,28 @@ export function Footer() {
                     </motion.div>
 
                     <motion.div className="space-y-4" variants={childVariants}>
-                        <h2 title="Connect"
-                            className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+                        <h2
+                            title="Connect"
+                            className="text-sm font-semibold text-muted-foreground uppercase tracking-wider"
+                        >
                             Connect
                         </h2>
                         <div className="flex flex-wrap gap-3">
-                            {siteConfig.footer.socialLinks.map((link) => (
+                            {siteConfig.footer.socialLinks.map((social) => (
                                 <motion.a
-                                    href={link.href}
+                                    key={`footer-social-${social.label}`}
+                                    href={social.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center justify-center w-10 h-10 bg-muted rounded-full hover:bg-linear-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white transition-all duration-300"
                                     whileHover={{scale: 1.2, rotate: 5}}
-                                    aria-label={`Visit my ${link.label} profile`}
+                                    aria-label={`Visit my ${social.label} profile`}
                                 >
-                                    {link.icon}
+                                    {social.icon}
                                 </motion.a>
                             ))}
                         </div>
                     </motion.div>
-
                 </motion.div>
             </div>
         </footer>
