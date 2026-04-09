@@ -5,6 +5,7 @@ export const siteConfig = {
     siteName: "Moe Alothman Portfolio",
     profile: {
         fullName: 'Moe Alothman',
+        position: 'Backend Software Engineer',
         avatarSrcImg: '/profile_pic.png',
         metadata: {
             role: 'Backend / Distributed Systems Engineer',
@@ -52,28 +53,28 @@ export const siteConfig = {
     },
     footer: {
         description: "Backend engineer building reliable APIs, distributed systems, and scalable production software with a focus on performance and clean design.",
+        quickLinks: [
+            {name: 'About', url: '#about'},
+            {name: 'Skills', url: '#skills'},
+            {name: 'Projects', url: '#projects'},
+            {name: 'Experience', url: '#experience'},
+        ],
         socialLinks: [
             {
-                href: 'https://github.com/alothmanmoe/',
+                url: 'https://github.com/alothmanmoe/',
                 icon: <FaGithub className="w-5 h-5"/>,
                 label: 'GitHub',
             },
             {
-                href: 'https://www.linkedin.com/in/alothmanmoe/',
+                url: 'https://www.linkedin.com/in/alothmanmoe/',
                 icon: <FaLinkedin className="w-5 h-5"/>,
                 label: 'LinkedIn',
             },
             {
-                href: 'alothmanmoe@gmail.com',
+                url: 'alothmanmoe@gmail.com',
                 icon: <FaEnvelope className="w-5 h-5"/>,
                 label: 'Email',
             }
-        ],
-        quickLinks: [
-            {name: 'About', href: '#about'},
-            {name: 'Skills', href: '#skills'},
-            {name: 'Projects', href: '#projects'},
-            {name: 'Experience', href: '#experience'},
         ]
     }
 };
