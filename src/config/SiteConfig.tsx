@@ -76,5 +76,36 @@ export const siteConfig = {
                 label: 'Email',
             }
         ]
-    }
+    },
+    skills: [
+        {name: "Java", image: "/skills/java.png", width: 70, height: 70},
+        {name: "Kotlin", image: "/skills/kotlin.svg", width: 70, height: 70},
+        {name: "AWS", image: "/skills/aws.png", width: 70, height: 70},
+        {name: "Spring Boot", image: "/skills/spring-boot.png", width: 70, height: 70},
+
+        {name: "Kafka", image: "/skills/kafka.svg", width: 70, height: 70},
+        {name: "Terraform", image: "/skills/terraform.png", width: 70, height: 70},
+        {name: "DynamoDB", image: "/skills/dynamodb.svg", width: 70, height: 70},
+        {name: "Docker", image: "/skills/docker.png", width: 70, height: 70},
+
+        {name: "Jenkins", image: "/skills/jenkins.svg", width: 70, height: 70},
+        {name: "GitHub Actions", image: "/skills/github-actions.svg", width: 70, height: 70},
+        {name: "LaunchDarkly", image: "/skills/launchdarkly.svg", width: 70, height: 70},
+        {name: 'Ansible', image: '/skills/ansible.svg', width: 80, height: 80},
+
+        {name: "Datadog", image: "/skills/datadog.svg", width: 70, height: 70},
+        {name: "Sumo Logic", image: "/skills/sumologic.svg", width: 70, height: 70},
+        {name: "MySQL", image: "/skills/mysql.png", width: 70, height: 70},
+        {name: "PostgreSQL", image: "/skills/postgresql.png", width: 70, height: 70},
+
+        {name: "Git", image: "/skills/git.svg", width: 70, height: 70},
+        {name: 'AWS Secrets Manager', image: '/skills/aws-secrets-manager.png', width: 80, height: 80},
+        {name: "Distributed Systems", image: "/skills/distributed-systems.png", width: 70, height: 70},
+        {name: "Microservices", image: "/skills/microservices.png", width: 70, height: 70},
+
+        {name: "JavaScript", image: "/skills/javascript.png", width: 70, height: 70},
+        {name: "TypeScript", image: "/skills/typescript.png", width: 70, height: 70},
+        {name: "React", image: "/skills/react.png", width: 70, height: 70},
+        {name: "Python", image: "/skills/python.svg", width: 70, height: 70}
+    ]
 };

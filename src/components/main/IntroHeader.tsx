@@ -5,14 +5,9 @@ import {FaRocket} from "react-icons/fa";
 
 const BackgroundGrid = () => (
     <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        {/* Faded tech grid */}
-        <div
-            className="absolute inset-0 bg-[linear-gradient(to_right,rgba(59,130,246,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(59,130,246,0.04)_1px,transparent_1px)] bg-size-[48px_48px] mask-[radial-gradient(ellipse_at_center,black_40%,transparent_85%)] rotate-45 scale-150 origin-center"/>
-
         {/* Large ambient glows */}
         <div className="absolute -top-24 -left-32 h-104 w-104 rounded-full bg-primary/12 blur-3xl"/>
         <div className="absolute top-[18%] -right-24 h-88 w-88 rounded-full bg-blue-500/12 blur-3xl"/>
-        <div className="absolute -bottom-32 left-[18%] h-96 w-[24rem] rounded-full bg-blue-400/10 blur-3xl"/>
 
         {/* Center beam / hero energy */}
         <div
@@ -43,9 +38,6 @@ const BackgroundGrid = () => (
             className="absolute right-[26%] top-[34%] h-2.5 w-2.5 rounded-full bg-primary/60 shadow-[0_0_18px_rgba(59,130,246,0.4)] animate-pulse"/>
         <div
             className="absolute right-[16%] bottom-[20%] h-3 w-3 rounded-full bg-blue-500/60 shadow-[0_0_20px_rgba(59,130,246,0.4)] float-animation"/>
-
-        {/* Bottom glow shelf */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-primary/8 via-blue-500/4 to-transparent"/>
     </div>
 )
 
@@ -116,7 +108,7 @@ export function IntroHeader() {
                     <button
                         className="group relative overflow-hidden bg-linear-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:cursor-pointer"
                         onClick={() => {
-                            document.getElementById(siteConfig.navbar.routes[0].link.slice(1))?.scrollIntoView({behavior: 'smooth'})
+                            document.getElementById(siteConfig.navbar.routes[1].link.slice(1))?.scrollIntoView({behavior: 'smooth'})
                         }}
                     >
                         <div className="flex items-center gap-3">
