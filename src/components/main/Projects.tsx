@@ -2,7 +2,6 @@ import {motion} from "motion/react"
 import {siteConfig} from "@/config/SiteConfig";
 import Image from 'next/image'
 import {FaGithub} from "react-icons/fa";
-import {Badge} from "@radix-ui/themes";
 
 const AnimatedBackground = () => (
     <div className="absolute inset-0 -z-10">

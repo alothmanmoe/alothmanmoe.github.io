@@ -64,17 +64,17 @@ export const siteConfig = {
             {
                 url: 'https://github.com/alothmanmoe/',
                 icon: <FaGithub className="w-5 h-5"/>,
-                label: 'GitHub',
+                label: 'GitHub'
             },
             {
                 url: 'https://www.linkedin.com/in/alothmanmoe/',
                 icon: <FaLinkedin className="w-5 h-5"/>,
-                label: 'LinkedIn',
+                label: 'LinkedIn'
             },
             {
-                url: 'alothmanmoe@gmail.com',
+                url: 'mailto:alothmanmoe@gmail.com',
                 icon: <FaEnvelope className="w-5 h-5"/>,
-                label: 'Email',
+                label: 'Email'
             }
         ]
     },
@@ -181,6 +181,23 @@ export const siteConfig = {
                 "Reviewed pull requests with a focus on code quality, best practices, and documentation.",
                 "Wrote tests and automated deployment scripts to improve production reliability and team workflow."
             ]
+        }
+    ],
+    contact: [
+        {
+            url: 'https://www.linkedin.com/in/alothmanmoe/',
+            icon: <FaLinkedin className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300"/>,
+            label: 'LinkedIn'
+        },
+        {
+            url: 'https://github.com/alothmanmoe/',
+            icon: <FaGithub className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300"/>,
+            label: 'GitHub'
+        },
+        {
+            url: 'mailto:alothmanmoe@gmail.com',
+            icon: <FaEnvelope className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300"/>,
+            label: 'Email'
         }
     ]
 };

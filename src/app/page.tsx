@@ -5,6 +5,7 @@ import {Skills} from "@/components/main/Skills";
 import {Resume} from "@/components/main/Resume";
 import {Projects} from "@/components/main/Projects";
 import {Experience} from "@/components/main/Experience";
+import {ContactCard} from "@/components/main/ContactCard";
 
 export default function Home() {
 
@@ -19,6 +20,7 @@ export default function Home() {
             <Projects />
             <Experience />
             <Resume />
+            <ContactCard />
         </div>
     );
 }
