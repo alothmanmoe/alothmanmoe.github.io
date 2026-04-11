@@ -7,6 +7,7 @@ export const siteConfig = {
         fullName: 'Moe Alothman',
         position: 'Backend Software Engineer',
         avatarSrcImg: '/profile_pic.png',
+        resume: '/resume.pdf',
         metadata: {
             role: 'Backend / Distributed Systems Engineer',
             description: 'Backend engineer specializing in distributed systems, APIs, and reliable production software. Explore my portfolio, experience, and projects.',

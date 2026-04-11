@@ -2,6 +2,7 @@
 
 import {IntroHeader} from "@/components/main/IntroHeader";
 import {Skills} from "@/components/main/Skills";
+import {Resume} from "@/components/main/Resume";
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
 
             <IntroHeader />
             <Skills />
+            <Resume />
         </div>
     );
 }
