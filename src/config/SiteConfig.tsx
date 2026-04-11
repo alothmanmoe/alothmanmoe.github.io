@@ -134,5 +134,53 @@ export const siteConfig = {
             image: "/projects/truckersportal.png",
             github: "https://github.com/alothmanmoe/TruckersPortal-Server"
         }
+    ],
+    experience: [
+        {
+            title: 'Senior Software Engineer',
+            company: 'Samsung SmartThings',
+            location: 'Remote',
+            companyImage: '/experience/smartthings.png',
+            date: 'Jan 2022 - Present',
+            description: 'Working on large-scale distributed systems focused on real-time event processing, scheduling, and platform reliability.',
+            achievements: [
+                "Architected and launched Hourglass, a sharded distributed scheduling system built on DynamoDB and MemoryDB, replacing a Cassandra-backed monolith and enabling a live migration of 90M+ schedules.",
+                "Founded and led the Event Review Board, defining schema and usage standards for event types across the platform and coordinating adoption across teams.",
+                "Reduced event pipeline load by 30% by designing a targeted subscription notification system that eliminated unnecessary proactive event traffic.",
+                "Helped scale SmartThings’ global event pipeline, a distributed system processing 400k events per second across 10M concurrent subscriptions.",
+                "Drove infrastructure savings of $20k+ per month through Kafka consumer upgrades, cluster consolidation, and Cassandra replica optimization.",
+                "Improved monitoring and alerting with Sumo Logic and Datadog, and contributed to incident response through 24/7 on-call support."
+            ]
+        },
+        {
+            title: 'Freelance Software Engineer',
+            company: 'Fiverr',
+            location: 'Remote',
+            companyImage: '/experience/fiverr.svg',
+            date: 'Mar 2020 - Jan 2022',
+            description: 'Built custom game modifications and multiplayer systems for clients, focused on gameplay changes, networking, and technical problem-solving.',
+            achievements: [
+                "Developed custom game-altering mods for clients based on requested features and gameplay changes.",
+                "Implemented client-server networking systems to handle inventory synchronization across multiple connected players.",
+                "Built A* pathfinding logic to validate connections before performing network operations.",
+                "Delivered tailored freelance projects through Fiverr and received strong client feedback."
+            ]
+        },
+        {
+            title: 'Software Engineer',
+            company: 'Eagle Path Express LLC',
+            location: 'On-site',
+            companyImage: '/experience/eaglepathexpress.svg',
+            date: 'Feb 2018 - Mar 2020',
+            description: 'Built and maintained internal software for freight operations, carrier management, and day-to-day logistics workflows.',
+            achievements: [
+                "Developed and maintained a commercial freight management portal using React, Java, Spring Boot, and GraphQL.",
+                "Improved operational efficiency by 60% by moving core freight workflows into an in-house platform.",
+                "Integrated with partner APIs to streamline cross-system operations and reduce time spent on external broker software.",
+                "Built features for load management, driver tracking, invoicing, and other daily freight operations.",
+                "Reviewed pull requests with a focus on code quality, best practices, and documentation.",
+                "Wrote tests and automated deployment scripts to improve production reliability and team workflow."
+            ]
+        }
     ]
 };
