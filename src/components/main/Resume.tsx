@@ -36,7 +36,7 @@ export function Resume() {
                 className="text-center mb-10 relative z-10"
             >
                 <h2 title="My Resume"
-                    className="text-4xl sm:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent tracking-tight mb-4">
+                    className="text-4xl sm:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent tracking-tight mb-4 leading-[1.15] pb-1">
                     My Resume
                 </h2>
                 <p className="text-lg text-muted-foreground">

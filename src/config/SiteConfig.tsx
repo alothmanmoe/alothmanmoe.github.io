@@ -108,5 +108,31 @@ export const siteConfig = {
         {name: "TypeScript", image: "/skills/typescript.png", width: 70, height: 70},
         {name: "React", image: "/skills/react.png", width: 70, height: 70},
         {name: "Python", image: "/skills/python.svg", width: 70, height: 70}
+    ],
+    projects: [
+        {
+            title: "Nooksy",
+            description: "A marketplace for booking private spaces built with Kotlin, Spring Boot, PostgreSQL, and Stripe.",
+            image: "/projects/nooksy.png",
+            github: "https://github.com/NooksyApp/Latch"
+        },
+        {
+            title: "Hush",
+            description: "An invite-only nightclub app for member verification, event discovery, and seamless QR code entry built with Java, Spring, MySQL, and React Native.",
+            image: "/projects/hush.png",
+            github: "https://github.com/ParticleStudios/Hush"
+        },
+        {
+            title: "OtakuTree",
+            description: "A full-stack anime streaming site built with Java, Spring, GraphQL, MySQL, and AniList integration.",
+            image: "/projects/otakutree.jpg",
+            github: "https://github.com/alothmanmoe/OtakuTree"
+        },
+        {
+            title: "Truckers Portal",
+            description: "A freight management platform for managing loads, drivers, and invoices using Java, Spring, GraphQL, and MongoDB.",
+            image: "/projects/truckersportal.png",
+            github: "https://github.com/alothmanmoe/TruckersPortal-Server"
+        }
     ]
 };
