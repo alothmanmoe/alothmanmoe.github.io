@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import {ReactNode} from "react";
 import {Geist, Geist_Mono} from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import {siteConfig} from "@/config/SiteConfig";
 import {CursorFollower} from "@/components/main/CursorFollower";
 import {Navbar} from "@/components/main/Navbar";
@@ -87,6 +88,7 @@ export default function RootLayout({children}: { children: ReactNode; }) {
         <Footer/>
         <CursorFollower/>
         </body>
+        <GoogleAnalytics gaId={siteConfig.analytics.gaId} />
         </html>
     );
 }

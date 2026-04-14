@@ -3,6 +3,9 @@ import {FaBriefcase, FaCode, FaEnvelope, FaGithub, FaLinkedin, FaProjectDiagram,
 export const siteConfig = {
     baseUrl: 'https://moealothman.com',
     siteName: "Moe Alothman Portfolio",
+    analytics: {
+        gaId: "G-Y1GWCRKHD1"
+    },
     profile: {
         fullName: 'Moe Alothman',
         position: 'Backend Software Engineer',
