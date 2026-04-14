@@ -2,6 +2,7 @@ import {motion} from "motion/react"
 import {siteConfig} from "@/config/SiteConfig";
 import Image from 'next/image'
 import {FaGithub} from "react-icons/fa";
+import {trackEvent} from "@/utils/gtag";
 
 const AnimatedBackground = () => (
     <div className="absolute inset-0 -z-10">
@@ -73,6 +74,10 @@ export function Projects() {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex items-center gap-1"
+                                            onClick={() => trackEvent("project_click", {
+                                                project_name: project.title,
+                                                project_uri: project.github
+                                            })}
                                         >
                                             <FaGithub className="size-3" />
                                             GitHub

@@ -2,6 +2,7 @@
 
 import {motion} from "motion/react";
 import {siteConfig} from "@/config/SiteConfig";
+import {trackEvent} from "@/utils/gtag";
 
 const containerVariants = {
     hidden: {opacity: 0, y: 20},
@@ -54,6 +55,10 @@ export function Footer() {
                                         href={link.url}
                                         className="hover:text-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
                                         aria-label={`Navigate to ${link.name} section`}
+                                        onClick={() => trackEvent("quick_link_click", {
+                                            link_label: `${link.name} Footer Button`,
+                                            destination: link.url
+                                        })}
                                     >
                                         {link.name}
                                     </a>
@@ -79,6 +84,10 @@ export function Footer() {
                                     className="flex items-center justify-center w-10 h-10 bg-muted rounded-full hover:bg-linear-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white transition-all duration-300"
                                     whileHover={{scale: 1.2, rotate: 5}}
                                     aria-label={`Visit my ${social.label} profile`}
+                                    onClick={() => trackEvent("contact_click", {
+                                        link_label: `${social.label} Footer Button`,
+                                        destination_uri: social.url
+                                    })}
                                 >
                                     {social.icon}
                                 </motion.a>

@@ -5,6 +5,7 @@ import {siteConfig} from "@/config/SiteConfig";
 import Image from 'next/image'
 
 import {useInView} from 'react-intersection-observer'
+import {trackEvent} from "@/utils/gtag";
 
 const AnimatedBackground = () => (
     <div className="absolute inset-0 -z-10">
@@ -138,7 +139,14 @@ export function Skills() {
                     >
                         <button
                             title={showAll ? 'Show Less Skills' : `Show All Skills`}
-                            onClick={() => setShowAll(!showAll)}
+                            onClick={() => {
+                                if (showAll) {
+                                    trackEvent("show_all_skills", {
+                                        link_label: "Show All Skills Button"
+                                    })
+                                }
+                                setShowAll(!showAll)
+                            }}
                             className="group relative overflow-hidden bg-linear-to-r from-primary to-blue-500 hover:from-blue-500 hover:to-primary text-primary-foreground px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                         >
                             <div className="relative z-10">

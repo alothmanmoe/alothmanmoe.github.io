@@ -13,6 +13,7 @@ import {
 } from "@/components/models/NavbarModels";
 import {FaBars, FaEnvelope, FaTimes} from "react-icons/fa";
 import Link from "next/link";
+import {trackEvent} from "@/utils/gtag";
 
 const NavbarBorder = ({visible}: { visible: boolean }) => {
     return (
@@ -85,6 +86,10 @@ const FullNavbarItems = ({routes, minimized, onItemClick}: FullNavbarItemsProps)
                     onClick={(e) => {
                         e.preventDefault()
                         onItemClick?.()
+                        trackEvent("narbar_link_click", {
+                            link_label: `${route.name} Navbar Button`,
+                            destination: route.link
+                        })
                         document.getElementById(route.link.slice(1))?.scrollIntoView({behavior: 'smooth'})
                     }}
                     className="relative px-4 py-2 text-neutral-600"
@@ -232,6 +237,10 @@ export function Navbar() {
                                     href={route.link}
                                     onClick={() => {
                                         setIsMobileMenuOpen(false)
+                                        trackEvent("narbar_link_click", {
+                                            link_label: `${route.name} Navbar Button`,
+                                            destination: route.link
+                                        })
                                         document.getElementById(route.link.slice(1))
                                             ?.scrollIntoView({behavior: 'smooth'})
                                     }}

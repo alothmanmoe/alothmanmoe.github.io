@@ -5,6 +5,7 @@ import {FaDownload} from "react-icons/fa";
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
 import {siteConfig} from "@/config/SiteConfig";
+import {trackEvent} from "@/utils/gtag";
 
 const Document = dynamic(() => import('react-pdf').then((mod) => mod.Document), {ssr: false})
 const Page = dynamic(() => import('react-pdf').then((mod) => mod.Page), {ssr: false})
@@ -79,6 +80,10 @@ export function Resume() {
                 whileHover={{scale: 1.05}}
                 whileTap={{scale: 0.95}}
                 className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-medium shadow-md hover:shadow-lg transition-all"
+                onClick={() => trackEvent("resume_download", {
+                    link_label: "Resume Button",
+                    file_name: siteConfig.profile.resume
+                })}
             >
                 <FaDownload className="text-base"/>
                 Download Resume

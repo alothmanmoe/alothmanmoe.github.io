@@ -1,6 +1,8 @@
 import {motion} from "motion/react"
 import {Variants} from "motion";
 import {siteConfig} from "@/config/SiteConfig";
+import {trackEvent} from "@/utils/gtag";
+import {it} from "node:test";
 
 const cardVariants: Variants = {
     hidden: {opacity: 0, y: 50, scale: 0.95},
@@ -56,6 +58,10 @@ export function ContactCard() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group bg-card/60 backdrop-blur-sm border-blue-500/30 hover:border-blue-500/60 hover:bg-blue-500/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+                                onClick={() => trackEvent("contact_click", {
+                                    link_label: `${item.label} Button`,
+                                    destination_uri: item.url
+                                })}
                             >
                                 {item.icon}
                             </a>
